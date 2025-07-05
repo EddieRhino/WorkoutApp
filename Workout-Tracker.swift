@@ -9,13 +9,33 @@ import SwiftUI
 
 struct Workout_Tracker: View {
     var body: some View{
-        NavigationLink(destination: PushWorkoutTracker()) {
-            Text("Push Workout")
-                .padding()
-                .frame(maxWidth: 200)
-                .background(Color.green)
-                .foregroundColor(.white)
-                .cornerRadius(10)
+        NavigationView{
+            VStack{
+                NavigationLink(destination: PushWorkoutTracker()) {
+                    Text("Push Workout")
+                        .padding()
+                        .frame(maxWidth: 200)
+                        .background(Color.green)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                NavigationLink(destination: PullWorkoutTracker()) {
+                    Text("Pull Workout")
+                        .padding()
+                        .frame(maxWidth: 200)
+                        .background(Color.green)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                NavigationLink(destination: LegsWorkoutTracker()) {
+                    Text("Legs Workout")
+                        .padding()
+                        .frame(maxWidth: 200)
+                        .background(Color.green)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+            }
         }
     }
 }
