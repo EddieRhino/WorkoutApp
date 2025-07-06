@@ -38,7 +38,7 @@ struct PullWorkoutTracker: View {
 
                     )
                     NavigationLink(destination: EditWorkouts(
-                        workoutOptions: $workoutOptions
+                        workoutOptions: $workoutOptions, workoutType: "Pull"
                     )){
                         Text("Edit Workouts")
                             .padding(1)
