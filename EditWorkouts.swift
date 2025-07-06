@@ -9,6 +9,7 @@ import SwiftUI
 
 struct EditWorkouts: View {
     @Binding var workoutOptions: [String]
+    let workoutType: String
     var body: some View {
         VStack {
             List {
@@ -17,7 +18,16 @@ struct EditWorkouts: View {
                 }
                 .onDelete { indexSet in
                     workoutOptions.remove(atOffsets: indexSet)
-                    saveWorkoutOptions(workoutOptions)
+                    if(workoutType == "Push"){
+                        saveWorkoutOptions(workoutOptions)
+                    }
+                    else if(workoutType == "Pull"){
+                        saveWorkoutOptionsPull(workoutOptions)
+                    }
+                    else if(workoutType == "Legs"){
+                        saveWorkoutOptionsLegs(workoutOptions)
+                    }
+                    
                 }
             }
         }
@@ -30,7 +40,7 @@ struct EditWorkouts_Previews: PreviewProvider {
         ]
     static var previews: some View {
         EditWorkouts(
-            workoutOptions: $sampleWorkoutOptions
+            workoutOptions: $sampleWorkoutOptions,workoutType: "Push"
         )
     }
 }
