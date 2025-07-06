@@ -21,9 +21,9 @@ struct LegsWorkoutTracker: View {
             VStack{
                 Text("Legs Workout").font(.largeTitle)
                 HStack{
-                    Picker("Workout Name", selection: $newWorkout){
+                    Picker("", selection: $newWorkout){
                         ForEach(workoutOptions , id: \.self) { workout in
-                            Text(workout)
+                            Text(workout).tag(workout)
                         }
                     }
                     .pickerStyle(MenuPickerStyle())
@@ -38,7 +38,7 @@ struct LegsWorkoutTracker: View {
 
                     )
                     NavigationLink(destination: EditWorkouts(
-                        workoutOptions: $workoutOptions
+                        workoutOptions: $workoutOptions, workoutType: "Legs"
                     )){
                         Text("Edit Workouts")
                             .padding(1)
