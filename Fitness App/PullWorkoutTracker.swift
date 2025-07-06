@@ -11,7 +11,7 @@ struct PullWorkoutTracker: View {
     @State private var workouts: [Exercise] = [
         Exercise(name: "Lat Pulldowns", date: Date(), weight: 135, reps: 10),
     ]
-    @State private var newWorkout: String = "Lat Pulldowns"
+    @State private var newWorkout: String = "Lat Pulldown"
     @State private var newWeight: String = ""
     @State private var newReps: String = ""
     @State private var workoutOptions = ["Add New Workout"]
