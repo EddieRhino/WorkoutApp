@@ -38,9 +38,9 @@ struct PushWorkoutTracker: View {
 
                     )
                     NavigationLink(destination: EditWorkouts(
-                        workoutOptions: $workoutOptions
+                        workoutOptions: $workoutOptions, workoutType: "Push"
                     )){
-                        Text("Edit Workouts")
+                        Text("Edit Workouts") 
                             .padding(1)
                     }
                     .padding()
@@ -143,16 +143,11 @@ struct PushWorkoutTracker: View {
             .toolbar{
                 ToolbarItem(placement: .navigationBarTrailing){
                     NavigationLink(destination: MainScreen()){
-                        Label("Home", systemImage: "house")
-                    }
-                }
-                ToolbarItem(placement: .navigationBarLeading){
-                    NavigationLink(destination: MainScreen()){
-                        Text("< Back")
+                        Image(systemName: "house")
                     }
                 }
             }
-            .navigationBarBackButtonHidden(true)
+            .navigationBarTitleDisplayMode(.inline)
             .onAppear{
                 workouts = loadWorkouts()
                 workoutOptions = loadWorkoutOptions()
