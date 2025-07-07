@@ -1,3 +1,4 @@
+
 //
 //  Workout-Tracker.swift
 //  Fitness App
@@ -92,7 +93,7 @@ struct CustomWorkoutTracker: View {
                             option.caseInsensitiveCompare(brandNewWorkout) == .orderedSame
                         }){
                             workoutOptions.insert(brandNewWorkout, at: workoutOptions.count - 1)
-                            saveWorkoutOptionsPull(workoutOptions)
+                            saveWorkoutOptionsCustom(workoutOptions)
                             newWorkout = brandNewWorkout
                             brandNewWorkout = ""
                         }
@@ -107,7 +108,7 @@ struct CustomWorkoutTracker: View {
                     )
                     
                     workouts.append(newWorkoutAdd)
-                    saveWorkoutsPull(workouts)
+                    saveWorkoutsCustom(workouts)
                     
                     newWorkout = ""
                     newWeight = ""
@@ -124,7 +125,7 @@ struct CustomWorkoutTracker: View {
                         }
                         .onDelete { indexSet in
                             workouts.remove(atOffsets: indexSet)
-                            saveWorkoutsPull(workouts)
+                            saveWorkoutsCustom(workouts)
                         }
                     }
                 }
@@ -140,7 +141,7 @@ struct CustomWorkoutTracker: View {
                     savedPast.append(newPast)
                     savePastWorkouts(savedPast)
                     workouts.removeAll()
-                    saveWorkoutsPull(workouts)
+                    saveWorkoutsCustom(workouts)
                 }
                 .padding()
                 .background(Color.green)
@@ -156,11 +157,11 @@ struct CustomWorkoutTracker: View {
             }
             .navigationBarTitleDisplayMode(.inline)
             .onAppear{
-                workouts = loadWorkoutsPull()
-                workoutOptions = loadWorkoutOptionsPull()
+                workouts = loadWorkoutsCustom()
+                workoutOptions = loadWorkoutOptionsCustom()
                 if workoutOptions.isEmpty {
                     workoutOptions = ["Add New Workout"]
-                    saveWorkoutOptionsPull(workoutOptions)
+                    saveWorkoutOptionsCustom(workoutOptions)
                 }
                 var sorted = workoutOptions.filter { $0 != "Add New Workout"}.sorted()
                 sorted.append("Add New Workout")
@@ -176,7 +177,7 @@ struct CustomWorkoutTracker: View {
 
 struct CustomWorkoutTracker_Previews: PreviewProvider {
     static var previews: some View {
-        PullWorkoutTracker()
+        CustomWorkoutTracker()
     }
 }
 
