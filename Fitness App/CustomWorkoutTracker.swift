@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CustomWorkoutTracker: View {
     @State private var workouts: [Exercise] = [
-        Exercise(name: "Lat Pulldowns", date: Date(), weight: 135, reps: 10),
+        Exercise(name: "Lat Pulldown", date: Date(), weight: 135, reps: 10),
     ]
     @State private var newWorkout: String = ""
     @State private var newWeight: String = ""

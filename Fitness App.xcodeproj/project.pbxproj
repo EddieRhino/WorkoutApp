@@ -18,6 +18,8 @@
 		3C3A4E202DFA786D00C61C0B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C3A4E1F2DFA786D00C61C0B /* Preview Assets.xcassets */; };
 		3C3A4E2B2E05077800C61C0B /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3A4E2A2E05077800C61C0B /* MainScreen.swift */; };
 		3C3A4E2D2E072C5F00C61C0B /* Workout-Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3A4E2C2E072C5F00C61C0B /* Workout-Tracker.swift */; };
+		3C44ED222E1B72F600587D1E /* UpperWorkoutTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44ED212E1B72F600587D1E /* UpperWorkoutTracker.swift */; };
+		3C44ED242E1B730500587D1E /* CustomWorkoutTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44ED232E1B730500587D1E /* CustomWorkoutTracker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		3C3A4E1F2DFA786D00C61C0B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3C3A4E2A2E05077800C61C0B /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		3C3A4E2C2E072C5F00C61C0B /* Workout-Tracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workout-Tracker.swift"; sourceTree = "<group>"; };
+		3C44ED212E1B72F600587D1E /* UpperWorkoutTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpperWorkoutTracker.swift; sourceTree = "<group>"; };
+		3C44ED232E1B730500587D1E /* CustomWorkoutTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomWorkoutTracker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,8 @@
 				3C27ADBD2E10D9DD000123EA /* PastWorkouts.swift */,
 				3C27ADBF2E198CF3000123EA /* PullWorkoutTracker.swift */,
 				3C27ADC12E198D01000123EA /* LegsWorkoutTracker.swift */,
+				3C44ED212E1B72F600587D1E /* UpperWorkoutTracker.swift */,
+				3C44ED232E1B730500587D1E /* CustomWorkoutTracker.swift */,
 			);
 			path = "Fitness App";
 			sourceTree = "<group>";
@@ -159,11 +165,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C3A4E2D2E072C5F00C61C0B /* Workout-Tracker.swift in Sources */,
+				3C44ED222E1B72F600587D1E /* UpperWorkoutTracker.swift in Sources */,
 				3C27ADBA2E109219000123EA /* PushWorkoutTracker.swift in Sources */,
 				3C3A4E2B2E05077800C61C0B /* MainScreen.swift in Sources */,
 				3C27ADBE2E10D9DD000123EA /* PastWorkouts.swift in Sources */,
 				3C27ADBC2E10CEF9000123EA /* EditWorkouts.swift in Sources */,
 				3C3A4E1B2DFA786A00C61C0B /* ContentView.swift in Sources */,
+				3C44ED242E1B730500587D1E /* CustomWorkoutTracker.swift in Sources */,
 				3C27ADC22E198D01000123EA /* LegsWorkoutTracker.swift in Sources */,
 				3C3A4E192DFA786A00C61C0B /* Fitness_AppApp.swift in Sources */,
 				3C27ADC02E198CF3000123EA /* PullWorkoutTracker.swift in Sources */,
