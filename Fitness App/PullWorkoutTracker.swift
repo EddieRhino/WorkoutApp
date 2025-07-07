@@ -16,10 +16,16 @@ struct PullWorkoutTracker: View {
     @State private var newReps: String = ""
     @State private var workoutOptions = ["Add New Workout"]
     @State private var brandNewWorkout: String = ""
+    private var custDate: Date? = nil
+    
+    private var workoutDate: Date{
+        custDate ?? Date()
+    }
+    
     var body: some View {
         NavigationView{
             VStack{
-                Text("Pull Workout").font(.largeTitle)
+                Text("Pull Workout\non \(dateFormatter.string(from: workoutDate))").font(.largeTitle)
                 HStack{
                     Picker("Workout Name", selection: $newWorkout){
                         ForEach(workoutOptions , id: \.self) { workout in
@@ -94,7 +100,7 @@ struct PullWorkoutTracker: View {
                     
                     let newWorkoutAdd = Exercise(
                         name: newWorkout,
-                        date: Date(),
+                        date: workoutDate,
                         weight: weight,
                         reps: reps
                     )
@@ -125,7 +131,7 @@ struct PullWorkoutTracker: View {
                     guard !workouts.isEmpty else {return}
                     
                     let newPast = PastWorkout(
-                        date: Date(),
+                        date: workoutDate,
                         title: "Pull Day",
                         exercises: workouts
                     )
