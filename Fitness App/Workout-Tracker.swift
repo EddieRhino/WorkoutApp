@@ -35,6 +35,22 @@ struct Workout_Tracker: View {
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
+                NavigationLink(destination: UpperWorkoutTracker()) {
+                    Text("Upper Body Workout")
+                        .padding()
+                        .frame(maxWidth: 200)
+                        .background(Color.green)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                NavigationLink(destination: CustomWorkoutTracker()) {
+                    Text("Custom Workout")
+                        .padding()
+                        .frame(maxWidth: 200)
+                        .background(Color.green)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
             }
         }
     }
