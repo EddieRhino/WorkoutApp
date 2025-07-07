@@ -16,10 +16,17 @@ struct PushWorkoutTracker: View {
     @State private var newReps: String = ""
     @State private var workoutOptions = ["Bench Press","Incline Bench Press","Pec Dec Flys","High to Low Cable Flys","Tricep Cable Pushdown","Tricep Cable Overhead Extension","Skullcrushers","Tricep Cable Kickbacks","Chest Press","Machine Shoulder Press","Lateral Raises","Cable Lateral Raises","Lateral Raise Machine","Dumbbell Shoulder Press","Incline Dumbbell Press","Flat Dumbbell Press","Dips","Add New Workout"]
     @State private var brandNewWorkout: String = ""
+    
+    private var custDate: Date? = nil
+    
+    private var workoutDate: Date{
+        custDate ?? Date()
+    }
+    
     var body: some View {
         NavigationView{
             VStack{
-                Text("Push Workout").font(.largeTitle)
+                Text("Push Workout\non \(dateFormatter.string(from: workoutDate))").font(.largeTitle)
                 HStack{
                     Picker("Workout Name", selection: $newWorkout){
                         ForEach(workoutOptions , id: \.self) { workout in
