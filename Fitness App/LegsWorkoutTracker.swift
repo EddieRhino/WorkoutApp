@@ -16,10 +16,17 @@ struct LegsWorkoutTracker: View {
     @State private var newReps: String = ""
     @State private var workoutOptions = ["Add New Workout"]
     @State private var brandNewWorkout: String = ""
+    
+    private var custDate: Date? = nil
+    
+    private var workoutDate: Date{
+        custDate ?? Date()
+    }
+    
     var body: some View {
         NavigationView{
             VStack{
-                Text("Legs Workout").font(.largeTitle)
+                Text("Legs Workout\non \(dateFormatter.string(from: workoutDate))").font(.largeTitle)
                 HStack{
                     Picker("", selection: $newWorkout){
                         ForEach(workoutOptions , id: \.self) { workout in
