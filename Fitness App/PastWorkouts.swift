@@ -33,6 +33,7 @@ struct PastWorkouts: View {
         }
         .onAppear{
             PastWorkoutList = loadPastWorkouts()
+            PastWorkoutList = sortArray(workoutPast: PastWorkoutList)
         }
     }
 }
@@ -65,6 +66,10 @@ let dateFormatter: DateFormatter = {
     formatter.dateStyle = .short
     return formatter
 }()
+
+func sortArray(workoutPast: [PastWorkout]) -> [PastWorkout]{
+    return workoutPast.sorted{$0.date < $1.date }
+}
 
 struct PastWorkouts_Previews: PreviewProvider {
     static var previews: some View {
