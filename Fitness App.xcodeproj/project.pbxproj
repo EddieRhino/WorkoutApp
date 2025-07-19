@@ -20,6 +20,7 @@
 		3C3A4E2D2E072C5F00C61C0B /* Workout-Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3A4E2C2E072C5F00C61C0B /* Workout-Tracker.swift */; };
 		3C44ED222E1B72F600587D1E /* UpperWorkoutTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44ED212E1B72F600587D1E /* UpperWorkoutTracker.swift */; };
 		3C44ED242E1B730500587D1E /* CustomWorkoutTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44ED232E1B730500587D1E /* CustomWorkoutTracker.swift */; };
+		3C44ED262E2C394C00587D1E /* PastWorkoutLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44ED252E2C394C00587D1E /* PastWorkoutLog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		3C3A4E2C2E072C5F00C61C0B /* Workout-Tracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workout-Tracker.swift"; sourceTree = "<group>"; };
 		3C44ED212E1B72F600587D1E /* UpperWorkoutTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpperWorkoutTracker.swift; sourceTree = "<group>"; };
 		3C44ED232E1B730500587D1E /* CustomWorkoutTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomWorkoutTracker.swift; sourceTree = "<group>"; };
+		3C44ED252E2C394C00587D1E /* PastWorkoutLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastWorkoutLog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				3C27ADC12E198D01000123EA /* LegsWorkoutTracker.swift */,
 				3C44ED212E1B72F600587D1E /* UpperWorkoutTracker.swift */,
 				3C44ED232E1B730500587D1E /* CustomWorkoutTracker.swift */,
+				3C44ED252E2C394C00587D1E /* PastWorkoutLog.swift */,
 			);
 			path = "Fitness App";
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C44ED262E2C394C00587D1E /* PastWorkoutLog.swift in Sources */,
 				3C3A4E2D2E072C5F00C61C0B /* Workout-Tracker.swift in Sources */,
 				3C44ED222E1B72F600587D1E /* UpperWorkoutTracker.swift in Sources */,
 				3C27ADBA2E109219000123EA /* PushWorkoutTracker.swift in Sources */,

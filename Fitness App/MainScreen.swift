@@ -29,6 +29,14 @@ struct MainScreen: View {
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
+                NavigationLink(destination: PastWorkoutLog()){
+                    Text("Log A Past Workout")
+                        .padding()
+                        .frame(maxWidth: 200)
+                        .background(Color.green)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
                 Spacer()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)

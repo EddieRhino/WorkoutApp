@@ -16,5 +16,6 @@ struct PastWorkoutLog: View {
 struct PastWorkoutLog_Previews: PreviewProvider {
     static var previews: some View {
         PastWorkoutLog()
+        
     }
 }
